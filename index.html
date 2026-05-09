@@ -3,109 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Race Ready | Protocol Zero</title>
-    <meta name="title" content="Race Ready | Protocol Zero">
-    <meta name="description" content="Stop guessing. Start executing. Race Ready is the ultimate performance tracker and data lab for ultra-runners, hybrid athletes, and endurance competitors.">
-    <meta name="keywords" content="endurance training app, hybrid athlete training tracker, ultra marathon roadmap builder, hyrox performance tracker, multisport training log, VO2 max tracker, sports science endurance lab">
-    <meta name="author" content="Race Ready">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://joinraceready.com/">
-    <meta property="og:title" content="Race Ready | The Conquest Engine">
-    <meta property="og:description" content="We don't tell you if you could. We are telling you what you need. Apply for Tier 1 access to the ultimate endurance roadmap.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-        body { 
-            font-family: 'Space Mono', monospace; 
-            background-color: #111827; 
-            color: #ffffff; 
+        /* Base Terminal Styles */
+        body {
+            background-color: #050505;
+            color: #E2E8F0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
         }
-        .blinking-cursor { animation: blink 1s step-end infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
+
+        /* Container for formatting */
+        .container {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        /* Main Aggressive Headline */
+        .glitch-text {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* The Translation Layer */
+        .subtitle {
+            color: #A0AEC0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 auto 30px auto;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Terminal System Status Block */
+        .terminal-block {
+            text-align: left;
+            background-color: #0a0a0a;
+            border-left: 3px solid #4FD1C5; /* Icy Tech Blue Accent */
+            padding: 15px 20px;
+            margin: 0 auto 30px auto;
+            font-family: 'Courier New', Courier, monospace;
+            color: #4FD1C5;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Blinking Cursor Animation */
+        .cursor {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* MailerLite Form Container Styling */
+        .form-container {
+            background-color: #111111;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 20px;
+        }
     </style>
 </head>
-<body class="flex items-center justify-center h-screen m-0 relative">
-    
-    <div class="max-w-2xl w-full p-8 mx-4 border border-gray-800 bg-gray-900 shadow-2xl relative">
-        <div class="absolute top-0 left-0 w-full h-1 bg-[#E02424]"></div>
+<body>
+
+    <div class="container">
         
-        <p class="text-gray-500 text-sm mb-4">> SYSTEM.LOG // INITIATING PROTOCOL ZERO...</p>
-        
-        <h1 class="text-2xl md:text-3xl font-bold mb-6 text-white uppercase tracking-wider leading-relaxed">
-            We don't tell you if you could.<br>
-            <span class="text-[#E02424]">We are telling what you need.</span>
-        </h1>
-        
-        <p class="text-gray-400 mb-8 leading-relaxed text-sm md:text-base">
+        <h1 class="glitch-text">SURVIVE THE TERRAIN.</h1>
+
+        <p class="subtitle">
+            Race Ready is an elite multisport telemetry app that syncs your raw biometrics to build dynamic, adaptive training plans for your next race. We analyze exactly where you are right now, and tell you exactly what you need to do to cross the finish line. What you could, what you need.
+        </p>
+
+        <div class="terminal-block">
             > Access to the Conquest Engine is currently restricted.<br>
             > Endurance roadmap engineering in progress.<br>
-            > Awaiting user telemetry to signal intent<span class="blinking-cursor font-bold text-[#E02424]">_</span>
-        </p>
-        
-        <form class="flex flex-col sm:flex-row gap-4" action="https://assets.mailerlite.com/jsonp/2329032/forms/186862023814939899/subscribe" method="post" id="waitlist-form" onsubmit="submitForm(event)">
-            
-            <input type="email" name="fields[email]" placeholder="enter_email_address" required
-                   class="bg-gray-800 border border-gray-700 text-white px-4 py-3 focus:outline-none focus:border-[#E02424] w-full sm:w-2/3 lowercase text-sm tracking-widest placeholder-gray-600">
-            
-            <button type="submit" id="submit-btn"
-                    class="bg-[#E02424] hover:bg-red-700 text-white font-bold py-3 px-6 transition duration-300 w-full sm:w-1/3 uppercase tracking-widest text-sm shadow-[0_0_15px_rgba(224,36,36,0.4)]">
-                Initialize
-            </button>
-            
-            <input type="hidden" name="ml-submit" value="1">
-            <input type="hidden" name="anticsrf" value="true">
-        </form>
-        
-        <p class="text-xs text-gray-600 mt-8 text-center tracking-widest uppercase">Security Clearance: Tier 1 Required</p>
-    </div>
-
-    <div id="success-modal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 transition-opacity">
-        <div class="bg-[#0b0f19] border border-[#E02424] p-8 max-w-md w-full mx-4 relative shadow-[0_0_40px_rgba(224,36,36,0.3)] text-center">
-            <p class="text-[#E02424] font-bold text-xl uppercase tracking-widest mb-4">Protocol Zero Initiated</p>
-            <div class="text-gray-300 text-sm leading-relaxed mb-8 text-left border-l-2 border-gray-700 pl-4">
-                <p class="mb-2">> The first and most important step to conquer.</p>
-                <p class="mb-2">> Your endurance is no longer a question. It is an equation.</p>
-                <p class="text-[#E02424] font-bold">> Advance Roster position secured.</p>
-            </div>
-            <button onclick="closeModal()" 
-                    class="bg-transparent border border-gray-600 hover:border-[#E02424] hover:text-[#E02424] text-gray-400 font-bold py-2 px-8 transition duration-300 uppercase tracking-widest text-sm">
-                Acknowledge
-            </button>
+            > Awaiting user telemetry to signal intent<span class="cursor">_</span>
         </div>
+
+        <div class="form-container">
+            
+            <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1778073");</style>
+            <style type="text/css">
+            /* LOADER */
+            .ml-form-embedSubmitLoad { display: inline-block; width: 20px; height: 20px; }
+            .g-recaptcha { transform: scale(1); -webkit-transform: scale(1); transform-origin: 0 0; -webkit-transform-origin: 0 0; }
+            .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+            .ml-form-embedSubmitLoad:after { content: " "; display: block; width: 11px; height: 11px; margin: 1px; border-radius: 50%; border: 4px solid #fff; border-color: #ffffff #ffffff #ffffff transparent; animation: ml-form-embedSubmitLoad 1.2s linear infinite; }
+            @keyframes ml-form-embedSubmitLoad { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+            #mlb2-41000370.ml-form-embedContainer { box-sizing: border-box; display: table; margin: 0 auto; position: static; width: 100% !important; }
+            #mlb2-41000370.ml-form-embedContainer h4, #mlb2-41000370.ml-form-embedContainer p, #mlb2-41000370.ml-form-embedContainer span, #mlb2-41000370.ml-form-embedContainer button { text-transform: none !important; letter-spacing: normal !important; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper { background-color: #f6f6f6; border-width: 0px; border-color: transparent; border-radius: 4px; border-style: solid; box-sizing: border-box; display: inline-block !important; margin: 0; padding: 0; position: relative; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper.embedPopup, #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 100%; max-width: 400px; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 400px; width: 100%; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody { padding: 20px 20px 0 20px; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4 { color: #000000; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 30px; font-weight: 400; margin: 0 0 10px 0; text-align: left; word-break: break-word; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p, #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p { color: #000000; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px; margin: 0 0 10px 0; text-align: left; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow { margin: 0 0 10px 0; width: 100%; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input { background-color: #ffffff !important; color: #333333 !important; border-color: #cccccc; border-radius: 4px !important; border-style: solid !important; border-width: 1px !important; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px !important; line-height: 21px !important; padding: 10px 10px !important; width: 100% !important; box-sizing: border-box !important; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button { background-color: #000000 !important; border: none !important; border-radius: 4px !important; color: #ffffff !important; cursor: pointer; font-family: 'Open Sans', Arial, Helvetica, sans-serif !important; font-size: 14px !important; font-weight: 700 !important; line-height: 21px !important; padding: 10px !important; width: 100% !important; }
+            #mlb2-41000370.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background-color: #333333 !important; }
+            </style>
+
+            <div id="mlb2-41000370" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41000370">
+              <div class="ml-form-align-center ">
+                <div class="ml-form-embedWrapper embedForm">
+                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                    <div class="ml-form-embedContent">
+                        <h4>Newsletter</h4>
+                        <p>Signup for news and special offers!</p>
+                    </div>
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2329032/forms/186862023814939899/subscribe" data-code="" method="post" target="_blank">
+                      <div class="ml-form-formContent">
+                          <div class="ml-form-fieldRow ml-last-item">
+                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                              <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+                            </div>
+                          </div>
+                      </div>
+                      <input type="hidden" name="ml-submit" value="1">
+                      <div class="ml-form-embedSubmit">
+                          <button type="submit" class="primary">Subscribe</button>
+                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                          <div class="ml-form-embedSubmitLoad"></div>
+                          <span class="sr-only">Loading...</span>
+                        </button>
+                      </div>
+                      <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                  </div>
+                  <div class="ml-form-successBody row-success" style="display: none">
+                    <div class="ml-form-successContent">
+                        <h4>Thank you!</h4>
+                        <p>You have successfully joined our subscriber list.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              function ml_webform_success_41000370() {
+                var $ = ml_jQuery || jQuery;
+                $('.ml-subscribe-form-41000370 .row-success').show();
+                $('.ml-subscribe-form-41000370 .row-form').hide();
+              }
+            </script>
+            <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+            <script>
+                fetch("https://assets.mailerlite.com/jsonp/2329032/forms/186862023814939899/takel")
+            </script>
+            
+        </div>
+
     </div>
 
-    <script>
-        function submitForm(event) {
-            event.preventDefault(); 
-            
-            const form = event.target;
-            const btn = document.getElementById('submit-btn');
-            
-            btn.innerText = 'UPLOADING...';
-            btn.disabled = true;
-
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                mode: 'no-cors' 
-            }).then(() => {
-                document.getElementById('success-modal').classList.remove('hidden');
-                form.reset();
-                btn.innerText = 'INITIALIZE';
-                btn.disabled = false;
-            }).catch((error) => {
-                console.error('Error:', error);
-                btn.innerText = 'INITIALIZE';
-                btn.disabled = false;
-            });
-        }
-
-        function closeModal() {
-            document.getElementById('success-modal').classList.add('hidden');
-        }
-    </script>
 </body>
 </html>
