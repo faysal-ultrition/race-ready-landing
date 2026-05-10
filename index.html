@@ -142,8 +142,10 @@
             > Awaiting user telemetry to signal intent<span class="cursor">_</span>
         </div>
 
-        <div class="form-container">
-            <form action="https://assets.mailerlite.com/jsonp/2329032/forms/186862023814939899/subscribe" method="post" target="_blank">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        <div class="form-container" id="form-wrapper">
+            <form action="https://assets.mailerlite.com/jsonp/2329032/forms/186862023814939899/subscribe" method="post" target="hidden_iframe" onsubmit="engageProtocol()">
                 <input type="email" class="custom-input" name="fields[email]" placeholder="ENTER TELEMETRY (EMAIL)" required autocomplete="email">
                 <input type="hidden" name="ml-submit" value="1">
                 <input type="hidden" name="anticsrf" value="true">
@@ -151,7 +153,21 @@
             </form>
         </div>
 
+        <div id="success-override" style="display: none; background-color: #111111; border: 1px solid #ff003c; border-radius: 8px; padding: 30px; text-align: left; font-family: 'Courier New', Courier, monospace;">
+            <p style="color: #ff003c; font-weight: bold; font-size: 1.1rem; margin-top: 0;">> TELEMETRY RECEIVED.</p>
+            <p style="color: #A0AEC0; line-height: 1.6; margin-bottom: 0;">Your biometrics are in the system. Check your inbox immediately for clearance protocols and Tier-One upgrade.</p>
+        </div>
+
     </div>
 
+    <script>
+        function engageProtocol() {
+            // 1. Hide the form container
+            document.getElementById('form-wrapper').style.display = 'none';
+            // 2. Show the terminal success message
+            document.getElementById('success-override').style.display = 'block';
+            // 3. The form data continues silently to the hidden iframe in the background
+        }
+    </script>
 </body>
 </html>
